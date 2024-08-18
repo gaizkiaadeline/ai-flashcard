@@ -1,9 +1,11 @@
+
+
 import Image from "next/image";
 import getStripe from "@/utils/get-stripe";
 import { SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 import { Container, AppBar, Button, Toolbar, Typography, Box, Grid } from "@mui/material";
 import Head from "next/head";
-
+import Link from "next/link"; // Import Link here
 
 export default function Home() {
   return (
@@ -36,7 +38,8 @@ export default function Home() {
           Welcome to Flashcard SaaS
         </Typography>
         <Typography variant="h5">The easiest way to make flashcard from your text</Typography>
-        <Button variant="contained" color="primary" sx={{mt: 2}}>Get Started</Button>
+        <Button variant="contained" color="primary" sx={{mt: 2}}>              <Link href="/generate">
+Get Started</Link></Button>
       </Box>
       <Box sx={{my: 6}}>
         <Typography variant="h4" component="h2" gutterBottom>Features</Typography>
@@ -98,7 +101,11 @@ export default function Home() {
                 Process to basic flashcard features and limited storage.
               </Typography>
               <Button variant="contained" color="primary" sx={{mt: 2}}>
+              <Link href="/Checkout1">
+
                 Choose basic
+                </Link>
+
               </Button>
           </Box>    
           </Grid>
@@ -119,7 +126,10 @@ export default function Home() {
                 Unlimited flashcards and storage, with priority support.
               </Typography>
               <Button variant="contained" color="primary" sx={{mt: 2}}>
+              <Link href="/Checkout2">
+
                 Choose basic
+                </Link>
               </Button>
           </Box> 
           </Grid>
