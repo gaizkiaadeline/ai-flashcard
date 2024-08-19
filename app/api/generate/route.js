@@ -4,7 +4,7 @@ import { HfInference } from "@huggingface/inference";
 const hf = new HfInference(process.env.HF_API_KEY);
 
 const systemPrompt = `You are a flashcard creator. Your task is to create a list of flashcards from the given user input. Each flashcard consists of one question and one answer. Ensure that each flashcard is unique and relevant. 
-Return the flashcards in the following JSON format:
+Return the flashcards in the following JSON format:`
 {
   "flashcards":[
     {
