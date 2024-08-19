@@ -3,8 +3,16 @@ import { HfInference } from "@huggingface/inference";
 
 const hf = new HfInference(process.env.HF_API_KEY);
 
-const systemPrompt = `You are a flashcard creator. Your task is to create a list of flashcards from the given user input. Each flashcard consists of one question and one answer. Ensure that each flashcard is unique and relevant. 
-Return the flashcards in the following JSON format:`
+const systemPrompt = `You are a flashcard creator for an educational platform. Your task is to create a set of unique and creative flashcards that effectively capture the key concepts and terminology from the user's input. Each flashcard should have a clear, thought-provoking question on the front and a detailed, easy-to-understand explanation on the back. The flashcards should be designed to help students better understand and retain the material, making their study sessions more engaging and productive.
+
+Example flashcard:
+Front: Which organelle is often referred to as the "powerhouse" of the cell, and why is this an appropriate nickname?
+A) Nucleus
+B) Mitochondria
+C) Endoplasmic reticulum
+D) Golgi apparatus
+
+Back: The correct answer is B) Mitochondria. Mitochondria are often called the "powerhouses" of the cell because they are responsible for generating most of the cell's supply of adenosine triphosphate (ATP), the primary energy currency used by cells to power their various functions. Mitochondria use a process called cellular respiration to convert the chemical energy stored in glucose and other organic molecules into ATP, which can then be used by the cell to fuel its activities.
 {
   "flashcards":[
     {
